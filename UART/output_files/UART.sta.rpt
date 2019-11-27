@@ -1,0 +1,1205 @@
+TimeQuest Timing Analyzer report for UART
+Wed Jan 23 22:52:32 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'CLK'
+ 13. Slow 1200mV 85C Model Hold: 'CLK'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'CLK'
+ 22. Slow 1200mV 0C Model Hold: 'CLK'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'CLK'
+ 30. Fast 1200mV 0C Model Hold: 'CLK'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; UART                                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6F17C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   1.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 224.37 MHz ; 224.37 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; CLK   ; -3.457 ; -251.845           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; CLK   ; 0.433 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; CLK   ; -3.000 ; -160.622                         ;
++-------+--------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK'                                                                                                                                   ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.457 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.378      ;
+; -3.457 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.378      ;
+; -3.457 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.378      ;
+; -3.295 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.216      ;
+; -3.295 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.216      ;
+; -3.295 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.216      ;
+; -3.230 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.151      ;
+; -3.230 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.151      ;
+; -3.230 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 4.151      ;
+; -3.048 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.973      ;
+; -3.048 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.973      ;
+; -3.048 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.973      ;
+; -3.048 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.967      ;
+; -3.048 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.967      ;
+; -3.048 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.967      ;
+; -3.042 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.963      ;
+; -3.042 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.963      ;
+; -3.042 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.963      ;
+; -3.028 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.952      ;
+; -3.028 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.952      ;
+; -3.028 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.952      ;
+; -3.023 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.947      ;
+; -3.023 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.947      ;
+; -3.023 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.947      ;
+; -3.007 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.926      ;
+; -3.007 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.926      ;
+; -3.007 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.926      ;
+; -2.985 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.909      ;
+; -2.985 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.909      ;
+; -2.985 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.909      ;
+; -2.941 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.865      ;
+; -2.941 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.865      ;
+; -2.941 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.865      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.913 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.834      ;
+; -2.886 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.811      ;
+; -2.886 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.811      ;
+; -2.886 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.811      ;
+; -2.863 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.784      ;
+; -2.863 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.784      ;
+; -2.863 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.784      ;
+; -2.862 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.787      ;
+; -2.862 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.787      ;
+; -2.862 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.787      ;
+; -2.845 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.764      ;
+; -2.845 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.764      ;
+; -2.845 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.764      ;
+; -2.841 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.760      ;
+; -2.841 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.760      ;
+; -2.841 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.760      ;
+; -2.822 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.747      ;
+; -2.822 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.747      ;
+; -2.822 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.747      ;
+; -2.821 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.746      ;
+; -2.821 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.746      ;
+; -2.821 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.746      ;
+; -2.819 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.738      ;
+; -2.819 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.738      ;
+; -2.819 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.738      ;
+; -2.800 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.724      ;
+; -2.800 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.724      ;
+; -2.800 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.724      ;
+; -2.799 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.723      ;
+; -2.799 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.723      ;
+; -2.799 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.723      ;
+; -2.787 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.708      ;
+; -2.787 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.708      ;
+; -2.787 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.708      ;
+; -2.780 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.699      ;
+; -2.780 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.699      ;
+; -2.780 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.699      ;
+; -2.754 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.673      ;
+; -2.754 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.673      ;
+; -2.754 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.673      ;
+; -2.715 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.639      ;
+; -2.715 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.639      ;
+; -2.715 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.077     ; 3.639      ;
+; -2.705 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.624      ;
+; -2.705 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.624      ;
+; -2.705 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.624      ;
+; -2.703 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.628      ;
+; -2.703 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.628      ;
+; -2.703 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.628      ;
+; -2.703 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.622      ;
+; -2.703 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.622      ;
+; -2.703 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.622      ;
+; -2.688 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]  ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.609      ;
+; -2.688 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]  ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.609      ;
+; -2.688 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]  ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.609      ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK'                                                                                                                                         ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.433 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; CLK          ; CLK         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; CLK          ; CLK         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; UART_Byte_Tx:UART_Byte_Tx1|Tx_State          ; UART_Byte_Tx:UART_Byte_Tx1|Tx_State          ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[0]      ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[0]      ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[1]      ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[1]      ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.473 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.101      ; 0.786      ;
+; 0.492 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.785      ;
+; 0.493 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.786      ;
+; 0.493 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.785      ;
+; 0.494 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.786      ;
+; 0.500 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[2]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[2]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.793      ;
+; 0.502 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[5]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[5]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.795      ;
+; 0.502 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[3]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[3]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.795      ;
+; 0.502 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[5]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.795      ;
+; 0.503 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[4]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[4]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.796      ;
+; 0.503 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.795      ;
+; 0.504 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.796      ;
+; 0.505 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[7]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[7]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.798      ;
+; 0.509 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.802      ;
+; 0.535 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[1]        ; UART_Byte_Tx:UART_Byte_Tx1|Tx_Done           ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.828      ;
+; 0.624 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.410      ;
+; 0.625 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.411      ;
+; 0.631 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.417      ;
+; 0.634 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[10]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.420      ;
+; 0.642 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[0]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[0]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.935      ;
+; 0.642 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.428      ;
+; 0.643 ; UART_Byte_Rx:UART_Byte_Rx1|s0_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.935      ;
+; 0.643 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.429      ;
+; 0.652 ; UART_Byte_Rx:UART_Byte_Rx1|tmp0_Rs232_Rx     ; UART_Byte_Rx:UART_Byte_Rx1|tmp1_Rs232_Rx     ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.944      ;
+; 0.675 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[0]        ; UART_Byte_Tx:UART_Byte_Tx1|Tx_Done           ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.968      ;
+; 0.681 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[7]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.974      ;
+; 0.709 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.002      ;
+; 0.715 ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|tmp0_Rs232_Rx     ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.007      ;
+; 0.724 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.101      ; 1.037      ;
+; 0.729 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; CLK          ; CLK         ; 0.000        ; 0.101      ; 1.042      ;
+; 0.731 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.023      ;
+; 0.741 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.033      ;
+; 0.742 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.035      ;
+; 0.742 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.035      ;
+; 0.742 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.035      ;
+; 0.742 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.034      ;
+; 0.743 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.035      ;
+; 0.743 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.100      ; 1.055      ;
+; 0.743 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.100      ; 1.055      ;
+; 0.745 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.100      ; 1.057      ;
+; 0.747 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.100      ; 1.059      ;
+; 0.748 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.041      ;
+; 0.748 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.041      ;
+; 0.748 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.041      ;
+; 0.748 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.749 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.041      ;
+; 0.749 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.041      ;
+; 0.750 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.042      ;
+; 0.752 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.045      ;
+; 0.756 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.542      ;
+; 0.761 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[3]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.762 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[1]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[5]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[5]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[13]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[13]       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.763 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[15]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[15]       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; UART_Byte_Rx:UART_Byte_Rx1|tmp1_Rs232_Rx     ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.549      ;
+; 0.764 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[2]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[2]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[6]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[7]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[7]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.765 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[4]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[4]        ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[14]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[14]       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.574      ; 1.551      ;
+; 0.766 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.058      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 242.07 MHz ; 242.07 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; CLK   ; -3.131 ; -228.294          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; CLK   ; 0.383 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; CLK   ; -3.000 ; -160.622                        ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK'                                                                                                                                    ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.131 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 4.062      ;
+; -3.131 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 4.062      ;
+; -3.131 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 4.062      ;
+; -2.981 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.912      ;
+; -2.981 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.912      ;
+; -2.981 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.912      ;
+; -2.963 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.894      ;
+; -2.963 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.894      ;
+; -2.963 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.894      ;
+; -2.758 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.686      ;
+; -2.758 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.686      ;
+; -2.758 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.686      ;
+; -2.750 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.681      ;
+; -2.750 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.681      ;
+; -2.750 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.681      ;
+; -2.748 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.680      ;
+; -2.748 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.680      ;
+; -2.748 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.680      ;
+; -2.745 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.677      ;
+; -2.745 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.677      ;
+; -2.745 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.677      ;
+; -2.741 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.673      ;
+; -2.741 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.673      ;
+; -2.741 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.673      ;
+; -2.716 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.648      ;
+; -2.716 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.648      ;
+; -2.716 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.648      ;
+; -2.713 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.641      ;
+; -2.713 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.641      ;
+; -2.713 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.641      ;
+; -2.672 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.604      ;
+; -2.672 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.604      ;
+; -2.672 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.604      ;
+; -2.667 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.599      ;
+; -2.667 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.599      ;
+; -2.667 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.599      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.628 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.558      ;
+; -2.621 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.553      ;
+; -2.621 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.553      ;
+; -2.621 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.553      ;
+; -2.610 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.541      ;
+; -2.610 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.541      ;
+; -2.610 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.541      ;
+; -2.595 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.527      ;
+; -2.595 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.527      ;
+; -2.595 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.527      ;
+; -2.588 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.520      ;
+; -2.588 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.520      ;
+; -2.588 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.520      ;
+; -2.583 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.511      ;
+; -2.583 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.511      ;
+; -2.583 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.511      ;
+; -2.563 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.491      ;
+; -2.563 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.491      ;
+; -2.563 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.491      ;
+; -2.557 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.485      ;
+; -2.557 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.485      ;
+; -2.557 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.485      ;
+; -2.557 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.489      ;
+; -2.557 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.489      ;
+; -2.557 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.489      ;
+; -2.545 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.473      ;
+; -2.545 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.473      ;
+; -2.545 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.473      ;
+; -2.540 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.472      ;
+; -2.540 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.472      ;
+; -2.540 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.472      ;
+; -2.533 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.464      ;
+; -2.533 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.464      ;
+; -2.533 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.071     ; 3.464      ;
+; -2.514 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.446      ;
+; -2.514 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.446      ;
+; -2.514 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.446      ;
+; -2.477 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.405      ;
+; -2.477 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.405      ;
+; -2.477 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.405      ;
+; -2.467 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.395      ;
+; -2.467 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.395      ;
+; -2.467 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.395      ;
+; -2.463 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.395      ;
+; -2.463 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.395      ;
+; -2.463 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.395      ;
+; -2.451 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.379      ;
+; -2.451 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.379      ;
+; -2.451 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.074     ; 3.379      ;
+; -2.451 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.383      ;
+; -2.451 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.383      ;
+; -2.451 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.070     ; 3.383      ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK'                                                                                                                                          ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.383 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.401 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Tx:UART_Byte_Tx1|Tx_State          ; UART_Byte_Tx:UART_Byte_Tx1|Tx_State          ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[0]      ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[0]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[1]      ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[1]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.439 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.725      ;
+; 0.455 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.722      ;
+; 0.456 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.723      ;
+; 0.456 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.723      ;
+; 0.457 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.724      ;
+; 0.470 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[2]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[2]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.737      ;
+; 0.470 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.737      ;
+; 0.471 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[5]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[5]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.738      ;
+; 0.471 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.738      ;
+; 0.472 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.739      ;
+; 0.472 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[3]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[3]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.739      ;
+; 0.472 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.739      ;
+; 0.473 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[4]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[4]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.740      ;
+; 0.474 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[7]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[7]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.741      ;
+; 0.501 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[1]        ; UART_Byte_Tx:UART_Byte_Tx1|Tx_Done           ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.768      ;
+; 0.561 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.295      ;
+; 0.561 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.295      ;
+; 0.565 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[10]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.537      ; 1.297      ;
+; 0.566 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.300      ;
+; 0.579 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.313      ;
+; 0.580 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.314      ;
+; 0.599 ; UART_Byte_Rx:UART_Byte_Rx1|s0_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.867      ;
+; 0.600 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[0]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[0]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.867      ;
+; 0.603 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[7]  ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.871      ;
+; 0.608 ; UART_Byte_Rx:UART_Byte_Rx1|tmp0_Rs232_Rx     ; UART_Byte_Rx:UART_Byte_Rx1|tmp1_Rs232_Rx     ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.876      ;
+; 0.627 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.894      ;
+; 0.629 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[0]        ; UART_Byte_Tx:UART_Byte_Tx1|Tx_Done           ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.896      ;
+; 0.649 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.917      ;
+; 0.662 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; UART_Byte_Tx:UART_Byte_Tx1|bps_clk           ; CLK          ; CLK         ; 0.000        ; 0.544      ; 1.401      ;
+; 0.663 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.537      ; 1.395      ;
+; 0.666 ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|tmp0_Rs232_Rx     ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.934      ;
+; 0.675 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.961      ;
+; 0.678 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.964      ;
+; 0.683 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.417      ;
+; 0.688 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.955      ;
+; 0.688 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.974      ;
+; 0.688 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.974      ;
+; 0.688 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.422      ;
+; 0.688 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[8]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.537      ; 1.420      ;
+; 0.689 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.975      ;
+; 0.690 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.957      ;
+; 0.690 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.957      ;
+; 0.691 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.958      ;
+; 0.691 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.958      ;
+; 0.692 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.959      ;
+; 0.693 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.979      ;
+; 0.697 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.697 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.697 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.697 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.697 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.698 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.965      ;
+; 0.699 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.966      ;
+; 0.700 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.434      ;
+; 0.701 ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.969      ;
+; 0.702 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.969      ;
+; 0.706 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[3]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[5]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[5]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[13]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[13]       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[1]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[6]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[15]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[15]       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[7]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[7]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.711 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[2]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[2]        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.979      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; CLK   ; -0.846 ; -48.280           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; CLK   ; 0.178 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; CLK   ; -3.000 ; -116.104                        ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK'                                                                                                                                    ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.846 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.797      ;
+; -0.846 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.797      ;
+; -0.846 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.797      ;
+; -0.814 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.765      ;
+; -0.814 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.765      ;
+; -0.814 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.765      ;
+; -0.782 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.733      ;
+; -0.782 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.733      ;
+; -0.782 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.733      ;
+; -0.733 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.682      ;
+; -0.733 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.682      ;
+; -0.733 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.682      ;
+; -0.695 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.647      ;
+; -0.695 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.647      ;
+; -0.695 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.647      ;
+; -0.692 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.644      ;
+; -0.692 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.644      ;
+; -0.692 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.644      ;
+; -0.690 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.642      ;
+; -0.690 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.642      ;
+; -0.690 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.642      ;
+; -0.682 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.634      ;
+; -0.682 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.634      ;
+; -0.682 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.634      ;
+; -0.680 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.631      ;
+; -0.680 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.631      ;
+; -0.680 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.631      ;
+; -0.677 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.626      ;
+; -0.677 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.626      ;
+; -0.677 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.626      ;
+; -0.676 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.628      ;
+; -0.676 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.628      ;
+; -0.676 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.628      ;
+; -0.674 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.626      ;
+; -0.674 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.626      ;
+; -0.674 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.626      ;
+; -0.670 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.622      ;
+; -0.670 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.622      ;
+; -0.670 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.622      ;
+; -0.663 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.612      ;
+; -0.663 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.612      ;
+; -0.663 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.612      ;
+; -0.644 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.596      ;
+; -0.644 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.596      ;
+; -0.644 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.596      ;
+; -0.638 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.587      ;
+; -0.638 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.587      ;
+; -0.638 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[4]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.587      ;
+; -0.634 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.583      ;
+; -0.634 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.583      ;
+; -0.634 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[1]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.583      ;
+; -0.630 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.579      ;
+; -0.630 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.579      ;
+; -0.630 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.579      ;
+; -0.625 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.577      ;
+; -0.625 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.577      ;
+; -0.625 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.577      ;
+; -0.613 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.565      ;
+; -0.613 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.565      ;
+; -0.613 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.565      ;
+; -0.613 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.562      ;
+; -0.613 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.562      ;
+; -0.613 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.562      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[12]       ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.604 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11] ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.555      ;
+; -0.602 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.551      ;
+; -0.602 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.551      ;
+; -0.602 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.551      ;
+; -0.587 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.539      ;
+; -0.587 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.539      ;
+; -0.587 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.539      ;
+; -0.586 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.538      ;
+; -0.586 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.538      ;
+; -0.586 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[2]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.538      ;
+; -0.583 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.532      ;
+; -0.583 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.532      ;
+; -0.583 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[3]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.532      ;
+; -0.579 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.530      ;
+; -0.579 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.530      ;
+; -0.579 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[0]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.530      ;
+; -0.577 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[5]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.529      ;
+; -0.577 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[5]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.529      ;
+; -0.577 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[5]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 1.000        ; -0.035     ; 1.529      ;
+; -0.561 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.510      ;
+; -0.561 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.510      ;
+; -0.561 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[6]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.510      ;
+; -0.555 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; UART_Byte_Rx:UART_Byte_Rx1|bps_cut[7]  ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
++--------+----------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK'                                                                                                                                          ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.178 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.186 ; UART_Byte_Tx:UART_Byte_Tx1|Tx_State          ; UART_Byte_Tx:UART_Byte_Tx1|Tx_State          ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[0]      ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[0]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[1]      ; UART_Byte_Rx:UART_Byte_Rx1|START_BIT[1]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.191 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.320      ;
+; 0.194 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[2]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[2]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.195 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[6]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.315      ;
+; 0.195 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[5]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[5]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.315      ;
+; 0.195 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[3]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[3]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.315      ;
+; 0.196 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[4]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[4]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.316      ;
+; 0.196 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.316      ;
+; 0.197 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[7]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[7]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.317      ;
+; 0.197 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.317      ;
+; 0.198 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.318      ;
+; 0.198 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.318      ;
+; 0.199 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.319      ;
+; 0.204 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.325      ;
+; 0.210 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[1]        ; UART_Byte_Tx:UART_Byte_Tx1|Tx_Done           ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.331      ;
+; 0.254 ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[0]  ; UART_Byte_Rx:UART_Byte_Rx1|Data_Byte[0]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.374      ;
+; 0.255 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.574      ;
+; 0.255 ; UART_Byte_Rx:UART_Byte_Rx1|s0_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.375      ;
+; 0.256 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.575      ;
+; 0.258 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.378      ;
+; 0.260 ; UART_Byte_Rx:UART_Byte_Rx1|tmp0_Rs232_Rx     ; UART_Byte_Rx:UART_Byte_Rx1|tmp1_Rs232_Rx     ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.380      ;
+; 0.265 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[0]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.584      ;
+; 0.266 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[10]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.236      ; 0.586      ;
+; 0.267 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; UART_Byte_Rx:UART_Byte_Rx1|tmp_data_byte[1]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.387      ;
+; 0.269 ; UART_Byte_Tx:UART_Byte_Tx1|bps_cut[0]        ; UART_Byte_Tx:UART_Byte_Tx1|Tx_Done           ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.390      ;
+; 0.269 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.588      ;
+; 0.269 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.588      ;
+; 0.279 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[7][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.399      ;
+; 0.289 ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|tmp0_Rs232_Rx     ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.409      ;
+; 0.290 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][2] ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.419      ;
+; 0.290 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[0][1] ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.419      ;
+; 0.294 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.414      ;
+; 0.296 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[6][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.296 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.296 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.296 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.297 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.417      ;
+; 0.297 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.297 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.298 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.299 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[1][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[4][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.300 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[3][1] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[10]       ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.428      ;
+; 0.303 ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][0] ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[2][2] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.303 ; UART_Byte_Rx:UART_Byte_Rx1|tmp1_Rs232_Rx     ; UART_Byte_Rx:UART_Byte_Rx1|Rx_State          ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.304 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[15]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[15]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[15]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[5]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[11]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[13]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[1]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[1]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[3]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[3]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[5]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[5]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[13]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[13]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; UART_Byte_Rx:UART_Byte_Rx1|s1_Rs232_Rx       ; UART_Byte_Rx:UART_Byte_Rx1|r_data_byte[5][0] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[7]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[9]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[6]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[6]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[7]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[7]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[9]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.307 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[2]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[4]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[8]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; UART_Byte_Tx:UART_Byte_Tx1|div_cut[14]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[8]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[8]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[2]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[2]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[4]        ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[4]        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[14]       ; UART_Byte_Rx:UART_Byte_Rx1|div_cut[14]       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 1
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 0.527 ns
+
+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.457   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+;  CLK             ; -3.457   ; 0.178 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -251.845 ; 0.0   ; 0.0      ; 0.0     ; -160.622            ;
+;  CLK             ; -251.845 ; 0.000 ; N/A      ; N/A     ; -160.622            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Rs232_Tx      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tx_Done       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Tx_State      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RST                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rs232_Rx                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Rs232_Tx      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; Tx_Done       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; Tx_State      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Rs232_Tx      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; Tx_Done       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; Tx_State      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Rs232_Tx      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; Tx_Done       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Tx_State      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 1692     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 1692     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 107   ; 107  ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; CLK    ; CLK   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RST        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rs232_Rx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Rs232_Tx    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Tx_Done     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Tx_State    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RST        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rs232_Rx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Rs232_Tx    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Tx_Done     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Tx_State    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Jan 23 22:52:26 2019
+Info: Command: quartus_sta UART -c UART
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'UART.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.457
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.457            -251.845 CLK 
+Info (332146): Worst-case hold slack is 0.433
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.433               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -160.622 CLK 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.131
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.131            -228.294 CLK 
+Info (332146): Worst-case hold slack is 0.383
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.383               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -160.622 CLK 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.846
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.846             -48.280 CLK 
+Info (332146): Worst-case hold slack is 0.178
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.178               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -116.104 CLK 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 0.527 ns
+    Info (332114): 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Wed Jan 23 22:52:32 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+

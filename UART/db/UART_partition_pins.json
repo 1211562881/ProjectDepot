@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Rs232_Tx",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_Done",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_State",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "Rs232_Rx",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

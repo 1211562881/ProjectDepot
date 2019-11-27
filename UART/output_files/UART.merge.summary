@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Wed Jan 23 15:46:22 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : UART
+Top-level Entity Name : UART
+Family : Cyclone IV E
+Total logic elements : 121
+    Total combinational functions : 109
+    Dedicated logic registers : 65
+Total registers : 65
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
